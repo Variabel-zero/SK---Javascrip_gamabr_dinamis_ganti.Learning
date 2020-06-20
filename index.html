@@ -6,6 +6,21 @@
 </head>
 <body>
 	<h1>Galeri JavaScript</h1>
-	<img src='images/0.png' alt="gambar tidak ditemukan">
+	<img src='images/0.png' alt="gambar tidak ditemukan" id='ganti'>
+	<a href="#" onclick="ganti(0)">1</a>
+	<a href="#" onclick="ganti(1)">2</a>
+	<a href="#" onclick="ganti(2)">3</a>
+	<a href="#" onclick="ganti(3)">4</a>
+	<a href="#" onclick="ganti(4)">5</a>
+	<a href="#" onclick="ganti(5)">6</a>
+	<a href="#" onclick="ganti(6)">7</a>
+	<a href="#" onclick="ganti(7)">7</a>
+	
+	<script>
+		function ganti(angka){
+			var lokasi = "images/"+angka+".png"
+			document.getElementById('ganti').src = lokasi;
+		}
+	</script>
 </body>
 </html>

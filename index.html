@@ -6,9 +6,10 @@
 </head>
 <body>
 	<h1>Galeri JavaScript</h1>
+	<div id="caption">Orange</div>
 	<img src='images/0.png' alt="gambar tidak ditemukan" id='ganti'>
 	<br />
-
+	
 	<a href="#" onclick="sebelum()">Sebelum</a>
 
 	<a href="#" onclick="ganti(0)">1</a>
@@ -26,11 +27,15 @@
 		//kita buat variabel default untuk nomor
 		var nomor = 0;
 
+		var caption = document.getElementById('caption');
+		var text = ['Orange','Kuning','Hijau','Biru','Unggu','Abu-abu','Pink','Vanila'];
+
 
 		function ganti(angka){
 			nomor = angka;
 			var lokasi = "images/"+angka+".png"
 			document.getElementById('ganti').src = lokasi;
+			caption.innerHTML =text[angka];
 			return false;
 		}
 
@@ -42,6 +47,7 @@
 			}
 			var lokasi = "images/"+nomor+".png"
 			document.getElementById('ganti').src = lokasi;
+			caption.innerHTML =text[nomor];
 			return false;
 		}
 
@@ -52,6 +58,7 @@
 			}
 			var lokasi = "images/"+nomor+".png"
 			document.getElementById('ganti').src = lokasi;
+			caption.innerHTML =text[nomor];
 			return false;
 		}
 	</script>
